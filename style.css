@@ -1,5 +1,5 @@
 .body {
-  background: gainsboro;
+  background: whitesmoke;
 }
 
 .image {
@@ -16,7 +16,7 @@
 }
 
 .summarycontainer {
-  background: gainsboro;
+  background: whitesmoke;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -52,7 +52,6 @@
 
 .thumbnailtitle {
   margin-top: 20px;
-  margin-bottom: 10px;
   color: lightseagreen;
 }
 
@@ -82,7 +81,7 @@
 
 .analysisthumbnailtitle {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-right: 50px;
   color: lightseagreen;
 }
 
@@ -127,9 +126,29 @@
   margin-bottom: 50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
+  .comparisonimage {
+    height: 400px;
+    width: 400px;
+  }
 
+@media (max-width: 720px) {
+  .comparisonimage {
+    height: 300px;
+    width: 300px;
+  }
+}
 
+@media (max-width: 540px) {
+  .comparisonimage {
+    height: 250px;
+    width: 250px;
+  }
+
+  .navbar {
+    background: lightseagreen;
+  }
+}
 
 
 
