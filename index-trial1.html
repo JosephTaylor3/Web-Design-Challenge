@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR AND TABS TO OTHER PAGES-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- Logo / Brand in top left of webpage, and setup of Navigation Bar -->
+        <a class="navbar-brand" href="index.html">Visualizations</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+
+            <!-- Home button for Landing Page-->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <!-- Dropdown for Plots selection -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Plots
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="temperature.html">Max Temperature</a>
+                  <a class="dropdown-item" href="humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                </div>
+            </li>
+            
+            <!-- Comparison button-->
+            <li class="nav-item">
+              <a class="nav-link" href="comparison.html">Comparison</a>
+            </li>
+
+            <!-- Data button-->
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">Data</a>
+            </li>
+            
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Create Summary section and Visualizations section for landing page using Bootstrap cards-->
+    <div class="container">
+        <div class="row">
+          <h1> Summary:  Latitude vs. Weather Elements </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            <div class="image">
+                <img src="Resources/assets/images/Fig1.png" alt="Max Temperature" style="width:600px;height:500px;">
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Visualizations</h5>
+                    <p class="card-text">Click on one of the images below for an in-depth analysis.</p>
+                    <a href="temperature.html">
+                      <img src="Resources/assets/images/Fig1.png" alt="Max Temperature" style="width:200px;height:200px;">
+                    </a>
+                    <a href="humidity.html">
+                      <img src="Resources/assets/images/Fig2.png" alt="Humidity" style="width:200px;height:200px;">
+                    </a>
+                    <a href="cloudiness.html">
+                      <img src="Resources/assets/images/Fig3.png" alt="Cloudiness" style="width:200px;height:200px;">
+                    </a>
+                    <a href="windspeed.html">
+                      <img src="Resources/assets/images/Fig4.png" alt="Wind Speed" style="width:200px;height:200px;">
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Summary: DataX vs. Latitude</h5>
+                    <p class="card-text">The purpose of this project was to anlyze how weather changes as you get closer or further from the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on various aspects of the weather.</p>
+                </div>
+                </div>
+            </div>
+        </div>  
+        <div class="row summarypage">
+          <div class = "box1">
+            <h3> Summary: Latitude vs. Weather Elements</h3>
+            <img class = picture src="Resources/assets/images/Fig1.png" alt="Max Temperature">
+            <p> The purpose of this project was to anlyze how weather changes as you get closer or further from the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on various aspects of the weather for over 500 cities.  
+            </p>
+            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, windspeed and humidity. This site provided the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+          </div>
+        
+          <div class = "box2">
+            <h5>Visualizations</h5>
+            <p class="card-text">Click on one of the images below for an in-depth analysis.</p>
+            <a href="temperature.html">
+              <img class = "thumbnail" src="Resources/assets/images/Fig1.png" alt="Max Temperature">
+            </a>
+            <a href="humidity.html">
+              <img class = "thumbnail" src="Resources/assets/images/Fig2.png" alt="Humidity">
+            </a>
+            <a href="cloudiness.html">
+              <img class = "thumbnail" src="Resources/assets/images/Fig3.png" alt="Cloudiness">
+            </a>
+            <a href="windspeed.html">
+              <img class = "thumbnail" src="Resources/assets/images/Fig4.png" alt="Wind Speed">
+            </a>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
